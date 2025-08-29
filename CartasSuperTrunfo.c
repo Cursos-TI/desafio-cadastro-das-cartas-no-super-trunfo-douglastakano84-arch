@@ -32,17 +32,17 @@ int main() {
    printf("Digite a área em m²:");
    scanf("%f", &área);
 
-   printf("Digite o PIB:");
+   printf("Digite o PIB (Bilhões de reais):");
    scanf("%f",&PIB);
 
    printf("Digite o nº de pontos turisticos:");
    scanf("%d", &pontosturisticos);
 
-   densidade = (populacao / área);
+   densidade = (float) (populaçao / área);
 
-   PIBpercapita = (PIB / populaçao);
+   PIBpercapita = (float) (PIB) * 1000000000 / (populaçao);
 
-   printf("Carta 1\n - Estado: %s\n - Codigo da carta: %s\n - Nome da cidade: %s\n - População: %d\n - Área: %f\n - PIB: %f\n - Números de pontos Turísticos: %d\n - Densidade populaciona: %f\n - PIB per capita: %f\n", estado, codigocarta, cidade, populaçao, área, PIB, pontosturisticos, densidade, PIBpercapita);
+   printf("Carta 1\n - Estado: %s\n - Codigo da carta: %s\n - Nome da cidade: %s\n - População: %d\n - Área em : %.2f M²\n - PIB: %.2f Bilhões de reais\n - Números de pontos Turísticos: %d\n - Densidade populaciona: %.2f hab/km²\n - PIB per capita: %.2f reais\n", estado, codigocarta, cidade, populaçao, área, PIB, pontosturisticos, densidade, PIBpercapita);
 
    // Área de entrada carta 2
 
@@ -62,15 +62,25 @@ int main() {
    printf("Digite a área em m²:");
    scanf("%f", &área);
 
-   printf("Digite o PIB:");
+   printf("Digite o PIB (bilhões de reais):");
    scanf("%f",&PIB);
 
    printf("Digite o nº de pontos turisticos:");
    scanf("%d", &pontosturisticos);
+   
+    densidade = (float) (populaçao / área);
 
-   printf("Carta 2\n - Estado: %s\n - Codigo da carta: %s\n - Nome da cidade: %s\n - População: %d\n - Área: %f\n - PIB: %f\n - Números de pontos Turísticos: %d\n", estado, codigocarta, cidade, populaçao, área, PIB, pontosturisticos);
+   PIBpercapita = (float) (PIB) * 1000000000 / (populaçao);
+
+
+   printf("Carta 2\n - Estado: %s\n - Codigo da carta: %s\n - Nome da cidade: %s\n - População: %d\n - Área: %.2f KM²\n - PIB: %.2f Bilhões de reais\n - Números de pontos Turísticos: %d\n - Densidade populaciona: %.2f hab/km²\n - PIB per capita: %.2f reais\n ", estado, codigocarta, cidade, populaçao, área, PIB, pontosturisticos, densidade, PIBpercapita);
 
    
   
 
-return 0;
+  return 0;
+
+
+
+
+}
